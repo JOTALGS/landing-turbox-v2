@@ -1,10 +1,10 @@
 'use client';
 import { useEffect, useRef, useState } from 'react';
-import { Raleway, Open_Sans } from 'next/font/google';
+import { Manrope, Carrois_Gothic } from 'next/font/google';
 
-// Google Fonts
-const raleway = Raleway({ subsets: ['latin'], weight: ['500','700','900'] });
-const openSans = Open_Sans({ subsets: ['latin'], weight: ['400','600'] });
+// Google Fonts - valid Manrope weights (up to 800) and Carrois Gothic (400)
+const manrope = Manrope({ subsets: ['latin'], weight: ['500','700','800'], display: 'swap' });
+const carroisGothic = Carrois_Gothic({ subsets: ['latin'], weight: ['400'], display: 'swap' });
 
 export default function ComoFunciona() {
   const [isVisible, setIsVisible] = useState(false);
@@ -71,8 +71,8 @@ export default function ComoFunciona() {
     <section ref={sectionRef} className="py-20 px-6" id="como-funciona">
       <div className="max-w-7xl mx-auto">
         <div className={`text-center transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-          <span className={`${raleway.className} font-semibold text-sm uppercase text-blue-400 tracking-wider`}>Cómo funciona</span>
-          <h2 className={`${raleway.className} font-extrabold text-3xl md:text-4xl text-white mt-3`}>Tres pasos para vender directo</h2>
+          <span className={`${manrope.className} font-semibold text-sm uppercase text-blue-400 tracking-wider`}>Cómo funciona</span>
+          <h2 className={`${manrope.className} font-extrabold text-3xl md:text-4xl text-white mt-3`}>Tres pasos para vender directo</h2>
         </div>
 
         <div className="mt-16 grid lg:grid-cols-3 gap-8 md:gap-12">
@@ -82,11 +82,11 @@ export default function ComoFunciona() {
               className={`bg-gray-800 p-8 rounded-xl shadow-2xl border border-gray-700 hover:border-blue-500/50 hover:shadow-blue-500/20 transition-all duration-500 hover:scale-[1.02] ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}
               style={{ transitionDelay: `${200 + idx * 200}ms` }}
             >
-              <span className={`${raleway.className} font-extrabold text-6xl text-blue-500 inline-block hover:scale-110 transition-transform duration-300`}>
+              <span className={`${manrope.className} font-extrabold text-6xl text-blue-500 inline-block hover:scale-110 transition-transform duration-300`}>
                 {step.number}
               </span>
-              <h3 className={`${raleway.className} font-medium text-2xl text-white mt-5`}>{step.title}</h3>
-              <p className={`${openSans.className} mt-2 text-gray-300`}>{step.subtitle}</p>
+              <h3 className={`${manrope.className} font-medium text-2xl text-white mt-5`}>{step.title}</h3>
+              <p className={`${carroisGothic.className} mt-2 text-gray-300`}>{step.subtitle}</p>
               <video
                 className="w-full rounded-lg shadow-lg border border-gray-600 mt-5 mb-4 hover:shadow-xl hover:scale-[1.02] transition-all duration-300"
                 controls
@@ -95,14 +95,14 @@ export default function ComoFunciona() {
               >
                 <source src={step.videoSrcMp4} type="video/mp4" />
               </video>
-              <p className={`${openSans.className} mt-5 text-gray-400`}>{step.description}</p>
-              <ul className={`${openSans.className} mt-5 space-y-2 list-disc list-inside text-gray-400`}>
+              <p className={`${carroisGothic.className} mt-5 text-gray-400`}>{step.description}</p>
+              <ul className={`${carroisGothic.className} mt-5 space-y-2 list-disc list-inside text-gray-400`}>
                 {step.list.map((item, i) => (
                   <li key={i} className="hover:text-gray-300 transition-colors duration-200">{item}</li>
                 ))}
               </ul>
               <div className="mt-6">
-                <p className={`${raleway.className} font-medium text-lg text-blue-400`}>Mira la demo</p>
+                <p className={`${manrope.className} font-medium text-lg text-blue-400`}>Mira la demo</p>
                 <video
                   className="w-full rounded-lg shadow-lg border border-gray-600 mt-3 hover:shadow-xl hover:scale-[1.02] transition-all duration-300"
                   controls

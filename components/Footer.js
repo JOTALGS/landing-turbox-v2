@@ -2,8 +2,9 @@
 import { useState } from 'react';
 import { Raleway, Open_Sans } from 'next/font/google';
 
-const raleway = Raleway({ subsets: ['latin'], weight: ['500','700','900'] });
-const openSans = Open_Sans({ subsets: ['latin'], weight: ['400','600'] });
+// ✅ Valid font weights (removed 900)
+const raleway = Raleway({ subsets: ['latin'], weight: ['500', '700', '800'] });
+const openSans = Open_Sans({ subsets: ['latin'], weight: ['400', '600'] });
 
 export default function Footer() {
   const [openFAQ, setOpenFAQ] = useState(null);
@@ -95,7 +96,7 @@ export default function Footer() {
               Sobre nosotros
             </h3>
             <p className={`${openSans.className} text-sm`}>
-              Turbox Go es un desarrollo de Next Smart Solutions, empresa especializada en diseñar y desplegar soluciones tecnológicas para turismo. Con presencia regional, integramos IA, RA/RV, geolocalización y plataformas SaaS para transformar destinos y experiencias. Creamos rutas autoguiadas inmersivas, asistentes inteligentes, sistemas de gestión para MiPyMEs, storytelling digital y soluciones adaptadas a distintos territorios. También aportamos experiencia en formación, planes y proyectos público‑privados con foco en sostenibilidad, inclusión y escalabilidad.
+              Turbox Go es un desarrollo de Next Smart Solutions, empresa especializada en diseñar y desplegar soluciones tecnológicas para turismo. Con presencia regional, integramos IA, RA/RV, geolocalización y plataformas SaaS para transformar destinos y experiencias. Creamos rutas autoguiadas inmersivas, asistentes inteligentes, sistemas de gestión para MiPyMEs, storytelling digital y soluciones adaptadas a distintos territorios. También aportamos experiencia en formación, planes y proyectos público-privados con foco en sostenibilidad, inclusión y escalabilidad.
             </p>
             <a href="https://nextsmart.solutions/" target="_blank" rel="noopener noreferrer" className={`${openSans.className} text-sm text-blue-400 hover:text-blue-300 mt-2 inline-block transition-colors duration-200`}>
               nextsmart.solutions
@@ -112,12 +113,14 @@ export default function Footer() {
             </a>
           </div>
 
+          {/* Legal Section */}
           <div className="animate-fade-in" style={{ animationDelay: '200ms' }}>
             <h3 className={`${raleway.className} text-xl font-semibold text-white mb-4`}>
               Legal
             </h3>
             <div className="space-y-4">
-              {/* Terms */}
+
+              {/* Términos de servicio */}
               <div className="bg-gray-700/50 rounded-lg overflow-hidden transition-all duration-300 hover:bg-gray-700/80">
                 <button
                   onClick={() => setOpenTerms(!openTerms)}
@@ -131,13 +134,20 @@ export default function Footer() {
                 <div className={`grid transition-all duration-300 ease-in-out ${openTerms ? 'grid-rows-[1fr] opacity-100' : 'grid-rows-[0fr] opacity-0'}`}>
                   <div className="overflow-hidden">
                     <div className={`${openSans.className} p-4 text-xs opacity-80 space-y-2 border-t border-gray-600`}>
-                      {/* Terms content here */}
+                      <p>Al usar este sitio aceptas estos Términos. Si no estás de acuerdo, por favor no lo utilices.</p>
+                      <p><strong>Uso del sitio:</strong> El contenido se ofrece con fines informativos y comerciales. Se prohíbe la reproducción y/o extracción automatizada de datos sin autorización.</p>
+                      <p><strong>Propiedad intelectual:</strong> Los contenidos del sitio (textos, imágenes, logotipos, software) pertenecen a Turbox Go o se usan bajo licencia.</p>
+                      <p><strong>Responsabilidad del usuario:</strong> Brindar información veraz y no realizar acciones que dañen o sobrecarguen el sitio.</p>
+                      <p><strong>Limitación de responsabilidad:</strong> Turbox Go no responde por interrupciones, errores, daños derivados del uso del sitio ni por contenidos de terceros.</p>
+                      <p><strong>Cambios:</strong> Podemos actualizar estos Términos. La versión vigente se publica en esta página.</p>
+                      <p><strong>Jurisdicción:</strong> Leyes de la República Oriental del Uruguay. Tribunales de Montevideo.</p>
+                      <p><strong>Contacto:</strong> legal@turboxgo.com</p>
                     </div>
                   </div>
                 </div>
               </div>
 
-              {/* Privacy */}
+              {/* Política de privacidad */}
               <div className="bg-gray-700/50 rounded-lg overflow-hidden transition-all duration-300 hover:bg-gray-700/80">
                 <button
                   onClick={() => setOpenPrivacy(!openPrivacy)}
@@ -151,11 +161,20 @@ export default function Footer() {
                 <div className={`grid transition-all duration-300 ease-in-out ${openPrivacy ? 'grid-rows-[1fr] opacity-100' : 'grid-rows-[0fr] opacity-0'}`}>
                   <div className="overflow-hidden">
                     <div className={`${openSans.className} p-4 text-xs opacity-80 space-y-2 border-t border-gray-600`}>
-                      {/* Privacy content here */}
+                      <p><strong>Responsable:</strong> Next Smart Solutions (Subito Red Desarrollos SRL), Porongos 2877, Montevideo, Uruguay. info@nextsmart.solutions • +598 97199059</p>
+                      <p><strong>Datos:</strong> contacto (nombre, email, teléfono), navegación (IP, dispositivo), información de formularios.</p>
+                      <p><strong>Finalidades:</strong> prestar y personalizar servicios; gestionar consultas; analítica; comunicaciones comerciales con consentimiento.</p>
+                      <p><strong>Base legal:</strong> consentimiento, ejecución contractual, interés legítimo.</p>
+                      <p><strong>Conservación:</strong> por el tiempo necesario o según normativa.</p>
+                      <p><strong>Derechos:</strong> acceso, rectificación, supresión, oposición, limitación y portabilidad. Contacto: privacy@turboxgo.com.</p>
+                      <p><strong>Transferencias:</strong> cuando corresponda, con garantías adecuadas (p. ej., RGPD).</p>
+                      <p><strong>Cookies:</strong> este sitio usa cookies. Ver Política de Cookies.</p>
+                      <p><strong>Seguridad:</strong> medidas técnicas y organizativas para proteger los datos.</p>
                     </div>
                   </div>
                 </div>
               </div>
+
             </div>
           </div>
         </div>

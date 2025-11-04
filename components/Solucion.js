@@ -1,9 +1,9 @@
 'use client';
 import { useEffect, useRef, useState } from 'react';
-import { Open_Sans } from 'next/font/google';
+import { Carrois_Gothic } from 'next/font/google';
 
 // Google Fonts
-const openSans = Open_Sans({ subsets: ['latin'], weight: ['400','600'] });
+const carroisGothic = Carrois_Gothic({ subsets: ['latin'], weight: ['400'] });
 
 export default function SolutionIntro() {
   const [isVisible, setIsVisible] = useState(false);
@@ -50,7 +50,7 @@ export default function SolutionIntro() {
             Tu navegador no soporta el video.
           </video>
         </div>
-        <p className={`mt-4 text-lg text-gray-300 transition-all duration-700 delay-300 ${openSans.className} ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+        <p className={`mt-4 text-lg text-gray-300 transition-all duration-700 delay-300 ${carroisGothic.className} ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           Turbox Go ofrece tres herramientas clave para construir autonomía y cumplir objetivos desde el primer mes.
         </p>
       </div>
