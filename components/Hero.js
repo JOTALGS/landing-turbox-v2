@@ -2,13 +2,13 @@
 import { Manrope, Carrois_Gothic } from 'next/font/google';
 
 // Google Fonts
-const manrope = Manrope({ 
-  subsets: ['latin'], 
-  weight: ['500', '700', '800'] 
+const manrope = Manrope({
+  subsets: ['latin'],
+  weight: ['500', '700', '800']
 });
-const carroisGothic = Carrois_Gothic({ 
-  subsets: ['latin'], 
-  weight: ['400'] 
+const carroisGothic = Carrois_Gothic({
+  subsets: ['latin'],
+  weight: ['400']
 });
 
 export default function Hero() {
@@ -37,7 +37,7 @@ export default function Hero() {
         <div className="mt-10 flex flex-col sm:flex-row justify-center items-center gap-4">
           <a
             id="signup"
-            href="#precios"
+            href="/waitlist"
             style={{ fontWeight: '700' }}
             className={`${carroisGothic.className} w-full sm:w-auto bg-blue-600 text-white text-base font-semibold px-8 py-3 rounded-lg hover:bg-blue-500 transition-colors shadow-lg transform hover:scale-105`}
           >
@@ -60,7 +60,7 @@ export default function Hero() {
               fill="currentColor"
               aria-hidden="true"
             >
-              <path d="M12.04 2C6.57 2 2.13 6.44 2.13 11.91c0 2.08.64 4.02 1.74 5.62L2 22l4.63-1.79a9.9 9.9 0 0 0 5.41 1.6h.01c5.47 0 9.91-4.44 9.91-9.91C21.96 6.44 17.51 2 12.04 2Zm5.77 14.1c-.24.67-1.18 1.09-1.87 1.23-.5.1-1.14.17-3.3-.69-2.77-1.15-4.55-3.96-4.69-4.15-.13-.18-1.12-1.49-1.12-2.85s.71-2.02.96-2.3c.24-.28.62-.41 1-.41.12 0 .23 0 .33.01.29.01.44.03.64.49.24.58.82 1.99.89 2.13.07.15.12.33.02.52-.1.2-.16.32-.32.5-.16.17-.34.38-.48.51-.16.16-.32.33-.14.64.19.32.85 1.39 1.83 2.25 1.26 1.08 2.33 1.41 2.7 1.56.28.12.6.09.8-.14.25-.28.57-.74.9-1.19.23-.33.52-.37.82-.25.31.13 1.95.92 2.29 1.09.33.17.55.25.64.39.1.15.1.84-.14 1.51Z"/>
+              <path d="M12.04 2C6.57 2 2.13 6.44 2.13 11.91c0 2.08.64 4.02 1.74 5.62L2 22l4.63-1.79a9.9 9.9 0 0 0 5.41 1.6h.01c5.47 0 9.91-4.44 9.91-9.91C21.96 6.44 17.51 2 12.04 2Zm5.77 14.1c-.24.67-1.18 1.09-1.87 1.23-.5.1-1.14.17-3.3-.69-2.77-1.15-4.55-3.96-4.69-4.15-.13-.18-1.12-1.49-1.12-2.85s.71-2.02.96-2.3c.24-.28.62-.41 1-.41.12 0 .23 0 .33.01.29.01.44.03.64.49.24.58.82 1.99.89 2.13.07.15.12.33.02.52-.1.2-.16.32-.32.5-.16.17-.34.38-.48.51-.16.16-.32.33-.14.64.19.32.85 1.39 1.83 2.25 1.26 1.08 2.33 1.41 2.7 1.56.28.12.6.09.8-.14.25-.28.57-.74.9-1.19.23-.33.52-.37.82-.25.31.13 1.95.92 2.29 1.09.33.17.55.25.64.39.1.15.1.84-.14 1.51Z" />
             </svg>
             Ver demo por WhatsApp
           </a>
