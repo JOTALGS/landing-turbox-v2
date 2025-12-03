@@ -31,8 +31,8 @@ function Divider() {
 				style={{
 					backgroundImage: `repeating-linear-gradient(
             -45deg,
-            #212121ff 0px,
-            #070707ff 2px,
+            #ccccccff 0px,
+            #adadadff 2px,
             transparent 1px,
             transparent 4px
           )`,
@@ -134,7 +134,7 @@ export default function WaitlistPage() {
 				<div className="flex-1 w-full">
 					<div className="space-y-4">
 						<div>
-							<label className="block text-gray-700 font-medium mb-1">Nombre</label>
+							<label className="block text-gray-500 font-medium mb-1">Nombre</label>
 							<input
 								type="text"
 								name="nombre"
@@ -146,7 +146,7 @@ export default function WaitlistPage() {
 						</div>
 
 						<div>
-							<label className="block text-gray-700 font-medium mb-1">Email</label>
+							<label className="block text-gray-500 font-medium mb-1">Email</label>
 							<input
 								type="email"
 								name="email"
@@ -158,7 +158,7 @@ export default function WaitlistPage() {
 						</div>
 
 						<div>
-							<label className="block text-gray-700 font-medium mb-1">Teléfono</label>
+							<label className="block text-gray-500 font-medium mb-1">Teléfono</label>
 							<input
 								type="text"
 								name="numero"
@@ -170,7 +170,7 @@ export default function WaitlistPage() {
 						</div>
 
 						<div>
-							<label className="block text-gray-700 font-medium mb-1">Localidad</label>
+							<label className="block text-gray-500 font-medium mb-1">Localidad</label>
 							<input
 								type="text"
 								name="localidad"
@@ -182,7 +182,7 @@ export default function WaitlistPage() {
 						</div>
 
 						<div>
-							<label className="block text-gray-700 font-medium mb-1">País</label>
+							<label className="block text-gray-500 font-medium mb-1">País</label>
 							<input
 								type="text"
 								name="pais"
@@ -194,7 +194,7 @@ export default function WaitlistPage() {
 						</div>
 
 						<div>
-							<label className="block text-gray-700 font-medium mb-1">Nombre del Negocio</label>
+							<label className="block text-gray-500 font-medium mb-1">Nombre del Negocio</label>
 							<input
 								type="text"
 								name="empresa"
@@ -206,7 +206,7 @@ export default function WaitlistPage() {
 						</div>
 
 						<div>
-							<label className="block text-gray-700 font-medium mb-1">Rubro</label>
+							<label className="block text-gray-500 font-medium mb-1">Rubro</label>
 							<select
 								name="rubro"
 								value={form.rubro}
@@ -230,13 +230,13 @@ export default function WaitlistPage() {
 				<div className="flex-1 w-full lg:pl-8">
 					<div className="lg:sticky lg:top-8">
 						<div className="text-center lg:text-left mb-8">
-							<h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
+							<h2 className="text-3xl md:text-4xl font-bold text-gray-200 mb-4">
 								Únete a la{" "}
 								<span className="text-transparent bg-clip-text bg-gradient-to-r from-[#258fbf] to-[#51608f]">
 									Lista de Espera
 								</span>
 							</h2>
-							<p className="text-lg text-gray-600 mb-8">
+							<p className="text-lg text-gray-400 mb-8">
 								Sé el primero en recibir novedades y acceso exclusivo a la versión de prueba.
 								Te notificaremos en tu casilla de email el momento en que puedas ingresar.
 							</p>
@@ -249,7 +249,7 @@ export default function WaitlistPage() {
 							type="button"
 							disabled={loading}
 							onClick={handleSubmit}
-							className="w-full bg-gradient-to-r from-[#258fbf] to-[#51608f] text-white px-6 py-3 rounded-lg font-semibold text-lg shadow-md hover:shadow-lg transition-all duration-300 disabled:opacity-50"
+							className="w-full bg-gradient-to-r from-[#258fbf] to-[#51608f] text-white px-6 py-3 rounded-lg font-semibold text-lg shadow-md hover:scale-101 hover:shadow-lg transition-all duration-300 disabled:opacity-50"
 						>
 							{loading ? "Enviando..." : "Unirme a la Lista"}
 						</button>
